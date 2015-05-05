@@ -51,6 +51,10 @@
   width: 140%;
 }
 
+.site:active {
+  transform: scale(0.955, 0.965);
+}
+
 /* Images */
 .site img {
   margin-left: -2.069853413%;
