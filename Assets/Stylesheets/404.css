@@ -1,0 +1,39 @@
+/*  404.css
+    Monday, 20 April, 2015
+    Haus of Alexander
+    Alexander Rhett Crammer  */
+
+/* Structure */
+.container {
+    font-family: "Georgia", "Times New Roman", "Times", serif;
+    font-size: 1.25em;
+    line-height: 300%;
+    margin-top: 25%;
+    text-align: center;
+}
+
+/* Content */
+h4 {
+    color: #4fdc90;
+}
+
+a {
+    text-decoration: none;
+    transition: color 175ms !important;
+}
+
+a:link {
+    color: #ec008c;
+}
+
+a:visited {
+    color: #ec008c;
+}
+
+a:hover {
+    color: #fc44b2;
+}
+
+a:active {
+    color: #a73178;
+}
