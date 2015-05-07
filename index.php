@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <?php
+  // Connect to the database so we can fetch site data
+  $connection = pg_connect("host=ec2-23-21-96-129.compute-1.amazonaws.com port=5432 dbname=d7cicvktqgqgub user=msnofwbhiewurk password=RMsUusgai5qv3wli6E1XlHncGI")
+    or die("Couldn't connect to PostgreSQL :(");
+  pg_close($connection);
   // Fetch the sites
   $connection = mysqli_connect("71.76.17.180","Alexander","99=dgXz\@r[HHQ6-Jp&;*5,2F","HoA");
   mysqli_set_charset($connection, "utf8"); // Prevent unknown character glyphs
