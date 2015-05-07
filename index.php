@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <?php
   // Connect to the database so we can fetch site data
-  $connection = pg_connect("host=ec2-23-21-96-129.compute-1.amazonaws.com port=5432 dbname=d7cicvktqgqgub user=msnofwbhiewurk password=RMsUusgai5qv3wli6E1XlHncGI")
-    or die("Couldn't connect to PostgreSQL :(");
+  $connection = pg_connect("host=ec2-23-21-96-129.compute-1.amazonaws.com port=5432 dbname=d7cicvktqgqgub user=msnofwbhiewurk password=RMsUusgai5qv3wli6E1XlHncGI");
+  $sites = pg_fetch_all(pg_query("SELECT * FROM Sites ORDER BY date_posted DESC"));
   pg_close($connection);
-  // Fetch the sites
-  $connection = mysqli_connect("71.76.17.180","Alexander","99=dgXz\@r[HHQ6-Jp&;*5,2F","HoA");
-  mysqli_set_charset($connection, "utf8"); // Prevent unknown character glyphs
-  $sites = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM Sites ORDER BY date_posted DESC"));
-  mysqli_close($connection);
 ?>
 <html>
   <head>
@@ -26,20 +21,20 @@
     <div class="container">
       <?php foreach ($sites as $site => $metadata):
         /* First, we'll seperate the headers and sub-headers */
-        $metadata[7] = trim(explode("(", $metadata[1])[1], ")"); ?>
+        $metadata["subheader"] = trim(explode("(", $metadata["name"])[1], ")"); ?>
           <div class="site">
         <?php
-          if ($metadata[7] != "") {
-            $metadata[1] = explode("(", $metadata[1]);
-            echo '<a href="' . $metadata[4] . '"><h4>' . $metadata[1][0] . '</h4>';
-            echo "<br /><h6>" . $metadata[7] . "</h6>";
+          if ($metadata["subheader"] != "") {
+            $metadata["name"] = explode("(", $metadata["name"]);
+            echo '<a href="' . $metadata["link"] . '"><h4>' . $metadata["name"][0] . '</h4>';
+            echo "<br /><h6>" . $metadata["subheader"] . "</h6>";
           } else {
-            echo '<a href="' . $metadata[4] . '"><h4>' . $metadata[1] . '</h4>';
+            echo '<a href="' . $metadata["link"] . '"><h4>' . $metadata["name"] . '</h4>';
           }
         ?>
           </a>
-          <a href="<?= $metadata[4] ?>"><img src="Assets/Thumbnails/<?= $metadata[2] ?>" alt="<?= $metadata[2] ?>"></a>
-          <p><?= $metadata[3] ?></p>
+          <a href="<?= $metadata["link"] ?>"><img src="Assets/Thumbnails/<?= $metadata["image"] ?>" alt="<?= $metadata["image"] ?>"></a>
+          <p><?= $metadata["brief"] ?></p>
         </div> <!-- .site -->
       <?php endforeach; ?>
     </div> <!-- .container -->
