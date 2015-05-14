@@ -11,6 +11,7 @@
   float: left;
   margin: 1.1299435028%;
   padding: 0.5649717514%;
+  transition: transform 50ms;
   width: 30.961381662%;
 }
 
