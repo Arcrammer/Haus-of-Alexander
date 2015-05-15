@@ -7,10 +7,10 @@
 ?>
 <html>
   <head>
-    <title>Haus of Alexander / Home</title>
+    <?php include "Assets/Inclusions/Main.php" ?>
+    <title><?= $title ?> / Home</title>
     <!-- Metadata -->
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <?= $metadata ?>
     <!-- Links -->
       <link rel="shortcut icon" href="../Images/favicon.png">
       <link rel="stylesheet" href="Assets/Stylesheets/Main.css">
