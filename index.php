@@ -53,7 +53,7 @@
       </section>
       <section>
         <h4>What's your experience?</h4>
-        <p>I'm most experienced with front-end and back-end web technologies such as HTML, CSS, JavaScript, PHP, Ruby on Rails (a little), and a few other things. I also have experience with Objective-C, Swift, Ruby (a little), and a little of both Java and Python.</p>
+        <p>I'm mostly experienced with front-end and back-end web technologies such as HTML, CSS, JavaScript, PHP, Ruby on Rails, and a few other things. I also have good experience with Objective-C, Swift, Ruby, and both Java and Python.</p>
       </section>
       <section>
         <h4>Me</h4>
