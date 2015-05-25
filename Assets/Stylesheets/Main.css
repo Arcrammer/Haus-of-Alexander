@@ -92,13 +92,13 @@ footer h4 {
 footer p, footer a {
   color: #fafafa;
   font-weight: 500;
-  padding: 2.5%;
 }
 
 img[alt="Self.png"] {
   /* Selfie */
   border-radius: 15%;
-  width: 100%;
+  margin-left: 10%;
+  width: 95%;
 }
 
 /* Other Stuff */
