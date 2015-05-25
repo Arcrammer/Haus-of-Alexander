@@ -12,7 +12,7 @@
     <!-- Metadata -->
       <?= $metadata ?>
     <!-- Links -->
-      <link rel="shortcut icon" href="../Images/favicon.png">
+      <link rel="shortcut icon" href="Assets/Images/favicon.png">
       <link rel="stylesheet" href="Assets/Stylesheets/Main.css">
       <link rel="stylesheet" href="Assets/Stylesheets/CollectionView.css">
   </head>
