@@ -181,4 +181,31 @@ img[alt="Self.png"] {
       padding: 3.3707865169% 0;
       width: 75.280898876%;
     }
+    
+    /* Footer */
+    footer {
+      margin: 0;
+      padding: 5%;
+    }
+    
+    footer section {
+/*       background-color: deeppink; */
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+    
+    footer section h4 {
+      margin: 5% 0;
+      padding: 0;
+    }
+    
+    footer section ul {
+      margin-bottom: 5%;
+    }
+    
+    footer img {
+      width: 50% !important;
+    }
   }
