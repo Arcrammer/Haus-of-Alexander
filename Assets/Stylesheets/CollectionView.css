@@ -35,11 +35,11 @@
   transition: color 125ms;
 }
 
-.site a:hover, .site a:hover h6 {
+.site:hover a, .site:hover a h6 {
   color: #ed53af;
 }
 
-.site a:active, .site a:active h6 {
+.site:active a, .site:active a h6 {
   color: #ed3ba6;
 }
 
