@@ -92,6 +92,7 @@ footer h4 {
 footer p, footer a {
   color: #fafafa;
   font-weight: 500;
+  width: 90%;
 }
 
 img[alt="Self.png"] {
