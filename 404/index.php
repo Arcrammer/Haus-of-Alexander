@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Oh no!</title>
+        <title>Haus of Alexander / 404 Oh no, Gaga!</title>
         <!-- Metadata -->
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     		<meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
