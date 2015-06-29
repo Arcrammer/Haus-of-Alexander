@@ -22,6 +22,24 @@ $(document).ready(function () {
     return thin;
   }
   
+  function initialiseThinView() {
+    // Everything needed to accomodate a thin viewport
+    $("nav").css("overflow","auto");
+    // Show the hidden pancake button so the user can show the menu
+    $(".pancake-button").css(visible);
+    // Stack the navigation list
+    $("nav ul").addClass("stack");
+  }
+  
+  function deinitialiseThinView() {
+    // Reversing everything needed to accomodate a thin viewport
+    $("nav").css("overflow","visible");
+    // Show the hidden pancake button so the user can show the menu
+    $(".pancake-button").css(hidden);
+    // Don't stack the navigation list items
+    $("nav ul").removeClass("stack");
+  }
+  
   function setNavigationBarVisibility() {
     // Show or hide the navigation bar
     if (!thin && $(window).scrollTop() > 150) {
@@ -29,16 +47,12 @@ $(document).ready(function () {
       $("nav ul").css(visible);
     } else if (!thin && $(window).scrollTop() <= 150) {
       // The viewport is wide and the header image is in the view
-      $("nav ul").css(hidden);      
-    } else if (thin && $(window).scrollTop() > 150) {
-      // The view is thin and the header image is not in the view
-      $("nav").css("overflow","auto");
-      // Show the hidden pancake button so the user can show the menu
-      $(".pancake-button").css(visible);
-      // The navigation list should not be visible but hidden then made visible by a button tap
       $("nav ul").css(hidden);
+    } else if (thin && $(window).scrollTop() > 150) {
+      // The viewport is thin and the header image is not in the view
+      $("nav ul").css(hidden); // The navigation list should not be visible but hidden then made visible by a button tap
     } else if (thin && $(window).scrollTop() <= 150) {
-      // The view is thin and the header image is in the viewport
+      // The viewport is thin and the header image is in the view
       $(".pancake-button").css(hidden);
     }
   }
@@ -47,43 +61,37 @@ $(document).ready(function () {
     // Determine whether the navigation bar should adapt for thin (mobile) widths or wide (desktop) widths
     if (!thin) {
       // The viewport is wide
-      $("nav ul").removeClass("stack");
+      deinitialiseThinView();
     } else {
       // The viewport is thin
-      $("nav ul").addClass("stack");
+      initialiseThinView();
     }
   }
   
   // Hide the pancake-button
   $(".pancake-button").css(hidden);
   
-  getViewportSize();
-  $(window).resize(function () {
-    getViewportSize();
-  });
-  
-  setNavigationBarVisibility(); // Determine whether the navigation list should show before the user scrolls
   $(window).scroll(function () {
     // Determine whether the navigation bar should show based on the current position from the top of the viewport
     getViewportSize();
     setNavigationBarVisibility();
+    setNavigationBarStyle();
   });
   
+  getViewportSize();
+  setNavigationBarVisibility(); // Determine whether the navigation list should show before the user scrolls
   setNavigationBarStyle();
   $(window).resize(function () {
     getViewportSize();
+    setNavigationBarVisibility();
     setNavigationBarStyle();
   });
   
   $(".pancake-button").click(function () {
-    if ($("nav ul").css("visibility") == "hidden") {
-      $("nav ul").css(visible);
-    } else {
-      $("nav ul").css(hidden);
-    }
+    ($("nav ul").css("visibility") == "hidden") ? $("nav ul").css(visible) : $("nav ul").css(hidden);
   });
   
   $("nav ul").click(function () {
-    $("nav ul").css(hidden);
+    (thin) ? $("nav ul").css(hidden) : null;
   });
 });
