@@ -45,15 +45,17 @@ $(document).ready(function () {
     if (!thin && $(window).scrollTop() > 150) {
       // The viewport is wide and the header image is not in the view
       $("nav ul").css(visible);
+      $(".pancake-container").css(hidden);
     } else if (!thin && $(window).scrollTop() <= 150) {
       // The viewport is wide and the header image is in the view
       $("nav ul").css(hidden);
+      $(".pancake-container").css(hidden);
     } else if (thin && $(window).scrollTop() > 150) {
       // The viewport is thin and the header image is not in the view
-      $("nav ul").css(hidden); // The navigation list should not be visible but hidden then made visible by a button tap
+      $(".pancake-container").css(visible);
     } else if (thin && $(window).scrollTop() <= 150) {
       // The viewport is thin and the header image is in the view
-      $(".pancake-button").css(hidden);
+      $(".pancake-container").css(hidden);
     }
   }
   
@@ -65,6 +67,7 @@ $(document).ready(function () {
     } else {
       // The viewport is thin
       initialiseThinView();
+      $("nav ul").css(hidden);
     }
   }
   

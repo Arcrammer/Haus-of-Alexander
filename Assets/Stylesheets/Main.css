@@ -61,6 +61,14 @@ nav ul {
   visibility: hidden; /* Prevent flashing on load before jQuery can hide it */
 }
 
+nav ul:not([class="stack"]) {
+  border-bottom: 3px solid gray;
+}
+
+.pancake-container {
+  border-bottom: 1px solid gray;
+}
+
 nav ul li {
   display: inline;
   margin: auto 2.5%;
@@ -161,21 +169,16 @@ footer section:last-of-type {
 }
 
 footer h4 {
-  color: #fff;
-  font-size: 1.15em;
-  font-weight: 300;
   margin-bottom: 10%;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 footer p, footer a {
   color: #fafafa;
-  font-weight: 500;
+  font-weight: 300;
   width: 90%;
 }
 
-img[alt="Self.png"] {
+footer img {
   /* Selfie */
   border-radius: 15%;
   margin-left: 10%;
@@ -196,12 +199,16 @@ img[alt="Self.png"] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 
-/* Fonts */
-@font-face {
-  font-family: "Jaapokki";
-  src: url("../Fonts/Jaapokki-Regular.ttf");
+.bold-header {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 2.5%;
+  text-transform: uppercase;
 }
 
+/* Fonts */
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 300;
@@ -212,6 +219,11 @@ img[alt="Self.png"] {
   font-family: "Source Sans Pro";
   font-weight: 500;
   src: url("../Fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Abigail";
+  src: url("../Fonts/Abigail.ttf");
 }
 
 /* Media Queries */
@@ -234,12 +246,8 @@ img[alt="Self.png"] {
       margin-left: 6.5%;
     }
     
-    footer section:first-of-type {
-      margin-left: 0;
-    }
-    
-    footer section:last-of-type {
-      margin-right: 0;
+    footer section:first-of-type, footer section:last-of-type {
+      padding: 0;
     }
     
     footer section {
@@ -248,7 +256,17 @@ img[alt="Self.png"] {
       width: 45%;
     }
     
+    footer p {
+      margin-left: 15%;
+      width: 70%;
+    }
+    
+    footer a {
+      margin-left: 0;
+    }
+    
     footer img {
+      margin-left: 0;
       width: 75% !important;
     }
   }
