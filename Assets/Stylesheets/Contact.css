@@ -18,11 +18,20 @@ p {
 }
 
 /* Form */
-form textarea {
-  font-family: "Abigail";
-  font-size 1.5em;
-  height: 175px;
+form {
   margin: 4% 2.5%;
-  padding: 1.5%;
+  text-align: center;
   width: 40%;
+}
+
+form textarea {
+  border: 3px solid grey;
+  border-radius: 10px;
+  color: rgb(62, 90, 111);
+  font-family: "Abigail";
+  font-size: 1.75em;
+  height: 175px;
+  outline: none;
+  padding: 5%;
+  resize: none;
 }

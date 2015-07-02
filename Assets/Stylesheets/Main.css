@@ -145,6 +145,35 @@ img[alt="Logo.png"] {
   width: 65%;
 }
 
+/* Buttons */
+.btn {
+  background-color: #2EB187;
+  border: 2.5px solid #368E72;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin: 5%;
+  outline: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  transition: background-color 75ms, border 150ms;
+}
+
+.btn:hover {
+  background-color: #3ACF9F;
+  border: 2.5px solid #34BD91;
+}
+
+.btn:active {
+  background-color: #3D816B;
+  border: 2.5px solid #1A372D;
+  color: #D2D2D2;
+}
+
 /* Footer */
 footer {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif;

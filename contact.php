@@ -36,7 +36,8 @@
       <h4 class="bold-header">Let's be friends!</h4>
       <p>If you'd like to call instead you can do that, too. If I don't answer just leave a message and I'll come back to you as soon as I'm able.</p>
       <form method="post">
-        <textarea name="message_content" placeholder="Sey hello here..."></textarea>
+        <textarea name="message_content" placeholder="Say hello here..."></textarea>
+        <input class="btn" type="submit" value="Continue">
       </form>
     </div> <!-- .container -->
     <footer class="black-radial">
@@ -65,5 +66,10 @@
       <script src="Assets/Scripts/jQuery.min.js"></script>
       <script src="Assets/Scripts/StatCounter.js"></script>
       <script src="Assets/Scripts/Main.js"></script>
+      <?php
+        if ($_POST) {
+          // The user has submitted a message
+        }
+      ?>
   </body>
 </html>
