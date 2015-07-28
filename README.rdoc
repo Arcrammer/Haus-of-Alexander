@@ -1,3 +1,9 @@
+# Haus of Alexander
+
+My work. :art:
+
+This site can be found at both [Haus of Alexander](http://www.hausofalexander.ml/) and [Heroku](https://infinite-springs-2226.herokuapp.com/) through automatic deploys from this repository.
+
 Ruby version:
   2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
 
