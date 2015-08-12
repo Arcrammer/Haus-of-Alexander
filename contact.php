@@ -1,32 +1,26 @@
+<?php /* header("Location: /") */ ?> <!-- Send the user away because this page isn't ready to be seen -->
 <!DOCTYPE html>
-<?php
-  // Connect to the database so we can fetch site data
-  $connection = mysqli_connect("71.76.17.180","Alexander","99=dgXz\@r[HHQ6-Jp&;*5,2F","HoA");
-  mysqli_set_charset($connection, "utf8"); // Prevent unknown character glyphs
-  $sites = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM Sites ORDER BY date_posted DESC"));
-  mysqli_close($connection);
-?>
 <html>
   <head>
-    <title>Haus of Alexander / Home</title>
+    <title>Haus of Alexander / Contact</title>
     <!-- Metadata -->
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <meta name="application-name" content="Haus of Alexander">
-      <meta name="description" content="Alexander's portfolio.">
+      <meta name="description" content="Contact Alexander.">
       <meta name="author" content="Alexander Rhett Crammer">
       <meta name="generator" content="Coda 2, Photoshop CS6, PHP, Apache, Windows">
       <meta name="keywords" content="Web Development, Portfolio, Sites, Design">
     <!-- Links -->
       <link rel="shortcut icon" href="Assets/Images/favicon.png">
       <link rel="stylesheet" href="Assets/Stylesheets/Main.css">
-      <link rel="stylesheet" href="Assets/Stylesheets/CollectionView.css">
+      <link rel="stylesheet" href="Assets/Stylesheets/Contact.css">
   </head>
   <body>
     <nav>
       <ul>
         <li><a href="/">Portfolio</a></li>
-<!--         <li><a href="contact.php">Contact</a></li> -->
+        <li><a href="contact.php">Contact</a></li>
         <li><a href="https://www.facebook.com/profile.php?id=100004220954730" target="_blank">Facebook</a></li>
         <li><a href="https://github.com/Arcrammer" target="_blank">GitHub</a></li>
         <li><a href="http://stackoverflow.com/users/1610576/arcrammer" target="_blank">Stack Overflow</a></li>
@@ -39,24 +33,12 @@
     </nav>
     <header class="banner black-radial"><a href="/"><img src="Assets/Images/Logo.png" alt="Logo.png"></a></header>
     <div class="container">
-      <?php foreach ($sites as $site => $metadata):
-        /* First, we'll seperate the headers and sub-headers */
-        $metadata[7] = trim(explode("(", $metadata[1])[1], ")"); ?>
-          <div class="site">
-        <?php
-          if ($metadata[7] != "") {
-            $metadata[1] = explode("(", $metadata[1]);
-            echo '<a href="' . $metadata[4] . '"><h4>' . $metadata[1][0] . '</h4>';
-            echo "<br /><h6>" . $metadata[7] . "</h6>";
-          } else {
-            echo '<a href="' . $metadata[4] . '"><h4>' . $metadata[1] . '</h4>';
-          }
-        ?>
-          </a>
-          <a href="<?= $metadata[4] ?>"><img src="Assets/Thumbnails/<?= $metadata[2] ?>" alt="<?= $metadata[2] ?>"></a>
-          <p><?= $metadata[3] ?></p>
-        </div> <!-- .site -->
-      <?php endforeach; ?>
+      <h4 class="bold-header">Let's be friends!</h4>
+      <p>If you'd like to call instead you can do that, too. If I don't answer just leave a message and I'll come back to you as soon as I'm able.</p>
+      <form method="post">
+        <textarea name="message_content" placeholder="Say hello here..."></textarea>
+        <input class="btn" type="submit" value="Continue">
+      </form>
     </div> <!-- .container -->
     <footer class="black-radial">
       <section>
@@ -84,5 +66,10 @@
       <script src="Assets/Scripts/jQuery.min.js"></script>
       <script src="Assets/Scripts/StatCounter.js"></script>
       <script src="Assets/Scripts/Main.js"></script>
+      <?php
+        if ($_POST) {
+          // The user has submitted a message
+        }
+      ?>
   </body>
 </html>

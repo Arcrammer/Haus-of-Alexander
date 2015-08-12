@@ -59,6 +59,7 @@ nav ul {
   text-align: center;
   text-transform: uppercase;
   visibility: hidden; /* Prevent flashing on load before jQuery can hide it */
+  z-index: 2; /* Prevent sites from floating above on click */
 }
 
 nav ul:not([class="stack"]) {

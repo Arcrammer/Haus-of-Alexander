@@ -1,0 +1,37 @@
+/*  Contact.css
+    Tuesday, 30 June, 2015
+    Haus of Alexander
+    Alexander Rhett Crammer  */
+
+/* Structure */
+.container {
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1em;
+}
+
+/* Content */
+p {
+  font-weight: 300;
+  line-height: 135%;
+  width: 50%;
+}
+
+/* Form */
+form {
+  margin: 4% 2.5%;
+  text-align: center;
+  width: 40%;
+}
+
+form textarea {
+  border: 3px solid grey;
+  border-radius: 10px;
+  color: rgb(62, 90, 111);
+  font-family: "Abigail";
+  font-size: 1.75em;
+  height: 175px;
+  outline: none;
+  padding: 5%;
+  resize: none;
+}
