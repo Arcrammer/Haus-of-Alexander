@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= yield(:title).empty? ? "Alexander" : yield(:title) %></title>
-    <!-- Stylesheets -->
-    <%= stylesheet_link_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- Scripts -->
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- XSS Tags -->
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <title>HoA</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
 </html>
