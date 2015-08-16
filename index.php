@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
   // Connect to the database so we can fetch site data
-  $connection = mysqli_connect("71.76.17.180","Alexander","99=dgXz\@r[HHQ6-Jp&;*5,2F","HoA");
+  $connection = mysqli_connect("localhost","Alexander","AXnR4xpyE5kWMew6tR","HoA");
   mysqli_set_charset($connection, "utf8"); // Prevent unknown character glyphs
   $sites = mysqli_fetch_all(mysqli_query($connection, "SELECT * FROM Sites ORDER BY date_posted DESC"));
   mysqli_close($connection);
