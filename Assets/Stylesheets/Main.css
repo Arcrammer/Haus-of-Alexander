@@ -1,343 +1,79 @@
 /*  Main.css
-    Friday, 17 April, 2015
     Haus of Alexander
+    Wednesday, 19 August, 2015
     Alexander Rhett Crammer  */
 
-/* Master Reset */
-/*  This reset was found at http://meyerweb.com/eric/tools/css/reset/. It's version is 2.0, 20110126  */
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}/* My Reset Starts Here */button{background:transparent;border:0;}
-
 /* Structure */
-body {
-  background-color: #1d1d1d;
-}
-
 .container {
-  font-size: 5em;
-  margin: 5% auto 5% auto;
-  overflow: auto;
-  width: 85%;
+  margin: 5% auto;
+  width: 80%;
 }
 
-/* Links (Excluding Navigation Bar Links) */
-a {
-  transition: color 100ms;
-}
-
-a:link {
-  color: #f23da7;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #f23da7;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ff73c5;
-  text-decoration: none;
-}
-
-a:active {
-  color: #d90b83;
-  text-decoration: none;
-}
-
-/* Navigation Bar */
-nav ul {
-  background-color: #1d1d1d;
+/* Content */
+header {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 0.8em;
-  font-weight: 100;
-  letter-spacing: 2.5px;
-  padding: 2.5% 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  font-size: 2.25em;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin: 3.5% 0;
   text-align: center;
   text-transform: uppercase;
-  visibility: hidden; /* Prevent flashing on load before jQuery can hide it */
-  z-index: 2; /* Prevent sites from floating above on click */
+  word-spacing: 10px;
 }
 
-nav ul:not([class="stack"]) {
-  border-bottom: 3px solid gray;
-}
-
-.pancake-container {
-  border-bottom: 1px solid gray;
-}
-
-nav ul li {
-  display: inline;
-  margin: auto 2.5%;
-}
-
-/* Navigation Links */
-nav a:link {
-  color: #F5F5F5;
-}
-
-nav a:visited {
-  color: #F5F5F5;
-}
-
-nav a:hover {
-  color: #ff73c5;
-}
-
-nav a:active {
-  color: #d90b83;
-}
-
-  /* These will be applied with jQuery based on the viewport width and distance from the top */
-  nav ul.stack {
-    /* Thin viewports will stack the navigation list and display it over the entire viewport */
-    background-color: rgba(29,29,29,0.975);
-    font-size: 1.2em;
-    padding-top: 35%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  nav ul.stack li {
-    display: block;
-    padding: 6.5% 0;
-  }
-  
-  .pancake-container {
-    background-color: #1d1d1d;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-  
-  .pancake-button {
-    float: right;
-    padding: 2.5%;
-    visibility: hidden;
-    width: 12.5%;
-  }
-  
-  .pancake-button:hover {
-    cursor: pointer;
-  }
-  
-  .pancake-button img {
-    width: 100%;
-  }
-  
-/* Banner */
-header.banner {
-  color: #fff;
-  font-family: "Jaapokki", "Helvetica Neue", "Helvetica";
+/* Sites */
+.site {
+  float: left;
+  margin: 0 1.65%;
   padding: 5% 0;
   text-align: center;
-  text-transform: uppercase;
+  width: 30%;
 }
 
-img[alt="Logo.png"] {
-  width: 65%;
+.site h1, .site h4 {
+  font-family: "Bebas Neue";
+  margin: 0;
 }
 
-/* Buttons */
-.btn {
-  background-color: #2EB187;
-  border: 2.5px solid #368E72;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #fff;
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  margin: 5%;
-  outline: none;
-  padding: 15px 25px;
-  text-transform: uppercase;
-  transition: background-color 75ms, border 150ms;
+.site h1 {
+  font-size: 1.75em;
+  letter-spacing: 2.5px;
+  line-height: 125%;
 }
 
-.btn:hover {
-  background-color: #3ACF9F;
-  border: 2.5px solid #34BD91;
+.site h4 {
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 3.5px;
+  margin-bottom: 6.5%;
 }
 
-.btn:active {
-  background-color: #3D816B;
-  border: 2.5px solid #1A372D;
-  color: #D2D2D2;
+.site a {
+  color: black;
+  text-decoration: none;
 }
 
-/* Footer */
-footer {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif;
-  margin: auto;
-  overflow: auto;
-  padding: 2.5% 0 5%;
+.site img {
+  border: 2.5px solid black;
+  margin-left: -2.5%;
+  width: 100%;
 }
 
-footer section {
-  float: left;
-  line-height: 135%;
-  margin: 1.5991471215%;
-  width: 19.669509595%;
+.site p {
+  font-family: "Oxygen";
+  font-size: 0.9em;
+  letter-spacing: 0.35px;
+  line-height: 175%;
 }
 
-footer section:first-of-type {
-  padding-left: 2.6652452026%;
+.site {
+  transition: transform 75ms;
 }
 
-footer section:last-of-type {
-  padding-right: 2.6652452026%;
+.site:hover * {
+  color: blueviolet;
 }
 
-footer h4 {
-  margin-bottom: 10%;
+.site:active {
+  transform: scale(0.95, 0.95);
 }
-
-footer p, footer a {
-  color: #fafafa;
-  font-weight: 300;
-  width: 90%;
-}
-
-footer img {
-  /* Selfie */
-  border-radius: 15%;
-  margin-left: 10%;
-  width: 95%;
-}
-
-/* Other Stuff */
-.black-radial {
-  background: #262626; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyNjI2MjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-radial-gradient(center, ellipse cover,  #262626 0%, #000000 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#262626), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  #262626 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  #262626 0%,#000000 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  #262626 0%,#000000 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  #262626 0%,#000000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-}
-
-.bold-header {
-  color: #fff;
-  font-size: 1.15em;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  margin-bottom: 2.5%;
-  text-transform: uppercase;
-}
-
-/* Fonts */
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 300;
-  src: url("../Fonts/SourceSansPro-Light.ttf");
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 500;
-  src: url("../Fonts/SourceSansPro-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Abigail";
-  src: url("../Fonts/Abigail.ttf");
-}
-
-/* Media Queries */
-@media only screen
-  and (min-width: 1024px) {
-    /* 1024px and wider */
-    
-    /* Banner */
-    img[alt="Logo.png"] {
-      width: 667px;
-    }
-  }
-
-@media only screen
-  and (max-width: 650px) {
-    /* 650px and thinner */
-    
-    /* Footer */
-    footer {
-      margin-left: 6.5%;
-    }
-    
-    footer section:first-of-type, footer section:last-of-type {
-      padding: 0;
-    }
-    
-    footer section {
-      font-size: 0.9em;
-      margin-top: 6.5%;
-      width: 45%;
-    }
-    
-    footer p {
-      margin-left: 15%;
-      width: 70%;
-    }
-    
-    footer a {
-      margin-left: 0;
-    }
-    
-    footer img {
-      margin-left: 0;
-      width: 75% !important;
-    }
-  }
-
-@media only screen
-  and (max-width: 700px) {
-    /* 700px and thinner */
-    
-    /* Banner */
-    header.banner {
-      padding: 10% 2.5%;
-    }
-    
-    img[alt="Logo.png"] {
-      padding: 3.3707865169% 0;
-      width: 80%;
-    }
-    
-    /* Footer */
-    footer {
-      margin: 0;
-      padding: 5%;
-    }
-    
-    footer section {
-      margin: 0 auto;
-      padding: 0;
-      text-align: center;
-      width: 100%;
-    }
-    
-    footer section h4 {
-      margin: 5% 0;
-      padding: 0;
-    }
-    
-    footer section ul {
-      margin-bottom: 5%;
-    }
-    
-    footer img {
-      width: 50% !important;
-    }
-  }
